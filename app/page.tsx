@@ -112,21 +112,21 @@ const projects = [
     category: "IA Conversacional",
     image: "/img/Avatar Interactivo IA-360.png.png",
     description:
-      "Plataforma web con avatar conversacional conectado a IA, reconocimiento de voz, generación de respuestas y experiencia interactiva para atención de clientes.",
-    stack: ["React", "TypeScript", "HeyGen", "OpenAI", "Vite", "Node.js"],
+      "Solución web de avatar interactivo para atención de usuarios, integrando conversación por voz y texto, transcripción, generación de respuestas con IA y control de sesiones en tiempo real.",
+    stack: ["React", "TypeScript", "Vite", "HeyGen", "OpenAI", "WebAudio"],
     highlights: [
       "Interacción por voz y texto",
-      "Optimización de latencia",
-      "Control de inactividad y sesión",
+      "Detección de voz y control de silencio",
+      "Gestión de inactividad y cierre de sesión",
     ],
-    private: "Tecnoinver",
+    private: "Tecnoinver / IA360",
     caseStudy: {
       problem:
-        "El negocio necesitaba atender consultas de clientes de forma continua sin escalar el equipo humano, manteniendo una conversación natural y no un formulario más.",
+        "Se necesitaba una experiencia de atención más natural que un chatbot tradicional, capaz de responder consultas en tiempo real mediante un avatar conversacional.",
       decision:
-        "Separé el reconocimiento de voz y la generación de respuestas en servicios independientes conectados vía NestJS, para poder cambiar de proveedor de IA sin tocar el frontend.",
+        "Implementé una interfaz web con React y TypeScript, integrando avatar streaming, transcripción de voz, lógica de interrupción, control de inactividad y comunicación con servicios de IA.",
       result:
-        "Bajó el tiempo de primera respuesta y liberó al equipo de soporte de las consultas repetitivas más comunes.",
+        "Se logró una demo funcional de atención interactiva, con conversación por voz y texto, pensada para captación, soporte y experiencias presenciales o embebidas en sitios web.",
     },
   },
   {
@@ -134,21 +134,21 @@ const projects = [
     category: "Automatización",
     image: "/img/Chatbot WhatsApp con IA.png.png",
     description:
-      "Backend para atención automatizada por WhatsApp usando Cloud API, IA generativa, transcripción de audios y flujo de agendamiento.",
-    stack: ["NestJS", "OpenAI", "Whisper", "MongoDB", "Redis", "WhatsApp API", "n8n"],
+      "Arquitectura de chatbot para WhatsApp Cloud API con IA generativa, procesamiento de mensajes de texto y audio, memoria de sesión y flujos guiados de atención.",
+    stack: ["NestJS", "OpenAI", "Whisper", "MongoDB", "Redis", "WhatsApp Cloud API"],
     highlights: [
-      "Flujos conversacionales",
-      "Memoria de sesión",
-      "Procesamiento de audios",
+      "Diseño de flujos conversacionales",
+      "Memoria temporal por sesión",
+      "Transcripción de audios con IA",
     ],
-    private: "Tecnoinver",
+    private: "Tecnoinver / IA360",
     caseStudy: {
       problem:
-        "Los clientes agendaban por WhatsApp de forma manual, lo que generaba demoras y errores de coordinación entre las conversaciones y el calendario real.",
+        "La atención por WhatsApp puede volverse repetitiva y difícil de escalar cuando depende completamente de respuestas manuales.",
       decision:
-        "Usé Whisper para transcribir los audios entrantes y guardé la memoria de sesión en Redis, para que el bot recuerde el contexto sin depender de la base de datos principal.",
+        "Diseñé una arquitectura con NestJS, WhatsApp Cloud API, OpenAI y almacenamiento de sesiones para mantener contexto, procesar mensajes y preparar flujos como agendamiento o derivación.",
       result:
-        "Automatizó buena parte del flujo de agendamiento y redujo la carga operativa del equipo de atención.",
+        "Quedó definida una base técnica escalable para automatizar conversaciones, responder consultas frecuentes y reducir carga operativa en canales de atención.",
     },
   },
   {
@@ -156,40 +156,56 @@ const projects = [
     category: "Analytics",
     image: "/img/Dashboard de métricas IA.png",
     description:
-      "Panel privado para visualizar sesiones, conversaciones, métricas de uso, idioma, ubicación y comportamiento de usuarios.",
-    stack: ["React", "NestJS", "MongoDB", "SQL", "JWT"],
+      "Panel administrativo para analizar el uso de soluciones con IA, registrando sesiones, interacciones, idioma, ubicación aproximada, navegador, dispositivo y comportamiento de usuarios.",
+    stack: ["React", "NestJS", "MongoDB", "TypeScript", "JWT"],
     highlights: [
-      "Registro de interacciones",
-      "Métricas de uso",
-      "Panel administrativo",
+      "Registro de sesiones e interacciones",
+      "Visualización de métricas de uso",
+      "Base para analítica de comportamiento",
     ],
-    private: "Tecnoinver",
+    private: "Tecnoinver / IA360",
+    caseStudy: {
+      problem:
+        "Las interacciones con el avatar necesitaban trazabilidad para entender uso real, volumen de consultas y comportamiento de los usuarios.",
+      decision:
+        "Diseñé una capa backend para registrar sesiones e interacciones, junto con un panel privado para consultar métricas operativas y datos relevantes de uso.",
+      result:
+        "La solución permite transformar conversaciones en información útil para análisis, mejoras del servicio y toma de decisiones.",
+    },
   },
   {
-    title: "Automatización flujo comercial",
+    title: "Automatización de flujo comercial",
     category: "Power Platform",
     image: "/img/Automatización flujo comercial.png",
     description:
-      "Diseño de solución para automatizar procesos comerciales, centralizar datos y ordenar aprobaciones mediante Power Apps, Power Automate y SharePoint.",
+      "Diseño de solución para digitalizar un proceso comercial basado en planillas, centralizando información, roles, aprobaciones y trazabilidad mediante herramientas Microsoft.",
     stack: ["Power Apps", "Power Automate", "SharePoint", "Microsoft 365"],
     highlights: [
-      "Digitalización de procesos",
-      "Listas SharePoint",
-      "Flujos de aprobación",
+      "Digitalización de formularios",
+      "Centralización en SharePoint",
+      "Flujos de revisión y aprobación",
     ],
     private: "Cliente corporativo",
+    caseStudy: {
+      problem:
+        "El proceso comercial dependía de planillas y coordinación manual entre áreas, generando duplicidad de información y poca trazabilidad.",
+      decision:
+        "Se Propuso una solución con Power Apps para ingreso de datos, SharePoint como repositorio central y Power Automate para flujos de revisión y notificación.",
+      result:
+        "La propuesta ordena el proceso, reduce tareas repetitivas y permite mayor control sobre estados, responsables y aprobaciones.",
+    },
   },
   {
     title: "App Full Stack con Django + React",
     category: "Full Stack",
     image: "/img/App Full Stack con Django + React.png",
     description:
-      "Aplicación cliente-servidor con CRUD completo, consumo de APIs REST, autenticación y persistencia de datos en MySQL.",
-    stack: ["Django", "React", "MySQL", "REST API"],
+      "Aplicación web cliente-servidor desarrollada con React y Django, incorporando operaciones CRUD, consumo de APIs REST y persistencia de datos en MySQL.",
+    stack: ["Django", "React", "MySQL", "REST API", "JavaScript"],
     highlights: [
       "CRUD completo",
-      "Arquitectura cliente-servidor",
-      "Base de datos relacional",
+      "Separación frontend/backend",
+      "Modelo relacional de datos",
     ],
   },
   {
@@ -197,10 +213,10 @@ const projects = [
     category: "Mobile",
     image: "/img/App de salud mental y telepsicología.png",
     description:
-      "Aplicación móvil con autenticación de usuarios, gestión de citas médicas para la salud mental y almacenamiento persistente.",
+      "Aplicación móvil enfocada en salud mental, con autenticación de usuarios, gestión de citas, almacenamiento local y navegación orientada a una experiencia simple para pacientes.",
     stack: ["React Native", "JavaScript", "AsyncStorage", "APIs"],
     highlights: [
-      "Autenticación",
+      "Autenticación de usuarios",
       "Gestión de citas",
       "Persistencia local",
     ],
@@ -210,12 +226,12 @@ const projects = [
     category: "Frontend",
     image: "/img/Integración API de Spotify.png",
     description:
-      "Aplicación frontend conectada a la API de Spotify, manejo de tokens, consumo de datos JSON y visualización de información musical.",
-    stack: ["Angular", "TypeScript", "Spotify API", "OAuth"],
+      "Aplicación frontend integrada con la API de Spotify para autenticar usuarios, consumir datos musicales y presentar información obtenida desde servicios externos.",
+    stack: ["Angular", "TypeScript", "Spotify API", "OAuth", "JSON"],
     highlights: [
       "Consumo de API externa",
-      "Manejo de tokens",
-      "Procesamiento JSON",
+      "Manejo de autenticación OAuth",
+      "Procesamiento de respuestas JSON",
     ],
   },
   {
@@ -223,12 +239,12 @@ const projects = [
     category: "IoT",
     image: "/img/Sistema de monitoreo IoT.png",
     description:
-      "Solución para monitoreo térmico mediante integración IoT, almacenamiento de datos en MySQL y visualización de información.",
+      "Sistema orientado al monitoreo de variables térmicas mediante captura de datos, almacenamiento en MySQL y visualización de registros históricos.",
     stack: ["IoT", "MySQL", "Backend", "Visualización"],
     highlights: [
-      "Captura de datos",
+      "Captura de mediciones",
       "Monitoreo térmico",
-      "Histórico de mediciones",
+      "Histórico de datos",
     ],
   },
 ];
@@ -239,12 +255,12 @@ const experienceItems = [
     title: "Full Stack Developer",
     company: "Tecnoinver - IA360 · Santiago, Chile",
     points: [
-      "Plataforma web con avatar conversacional e IA para captación de clientes y soporte de negocio.",
-      "Arquitectura de microservicios con NestJS y Node.js, definiendo APIs REST.",
-      "Frontend en React + Vite + TypeScript con foco en UX/UI y diseño responsive.",
-      "Modelado de bases de datos PostgreSQL y MySQL para conversaciones, usuarios y métricas.",
-      "Dashboard privado con autenticación para visualización de métricas y reportes generados por IA.",
-      "Automatización de procesos con n8n e integración de APIs externas.",
+      "Desarrollo de soluciones web con IA aplicada para atención, automatización y soporte de procesos comerciales.",
+      "Implementación de avatares conversacionales con interacción por voz y texto, control de sesión y lógica de inactividad.",
+      "Construcción de frontends en React, Vite, Next.js y TypeScript con foco en experiencia de usuario y diseño responsive.",
+      "Diseño de APIs y servicios backend con Node.js y NestJS para integración con modelos de IA, bases de datos y plataformas externas.",
+      "Registro y análisis de sesiones, conversaciones e interacciones mediante bases de datos como MongoDB, PostgreSQL y MySQL.",
+      "Automatización de procesos usando herramientas como n8n, Power Automate, SharePoint y APIs de terceros.",
     ],
   },
   {
@@ -254,7 +270,6 @@ const experienceItems = [
     points: [],
   },
 ];
-
 // Envuelve cualquier bloque y lo hace aparecer con fade + slide al entrar en el viewport
 function Reveal({ children }: { children: React.ReactNode }) {
   const ref = useRef<HTMLDivElement>(null);
@@ -419,19 +434,26 @@ export default function Home() {
       <div className="pointer-events-none fixed inset-0 z-0 bg-[radial-gradient(circle_at_82%_8%,rgba(76,125,174,0.16),transparent_42%)]" />
 
       <header className="fixed left-0 right-0 top-0 z-50 flex items-center justify-between border-b border-[#9FC1E3]/10 bg-[#050608]/70 px-[6vw] py-5 backdrop-blur-xl">
-        <a href="#inicio" className="font-space text-lg font-bold tracking-wide">
-          G<span className="text-[#9FC1E3]">.</span>C
+        <a href="#inicio" className="flex items-center">
+          <Image
+            src="/img/Logoestio1.png"
+            alt="Logo Gabriel Cubillos"
+            width={100}
+            height={100}
+            priority
+            className="h-20 w-auto object-contain"
+          />
         </a>
 
         <nav className="hidden items-center gap-8 md:flex">
           <a href="#sobre-mi" className="text-sm font-medium tracking-wide text-[#6B7280] transition hover:text-[#9FC1E3]">
             Sobre mí
           </a>
-          <a href="#stack" className="text-sm font-medium tracking-wide text-[#6B7280] transition hover:text-[#9FC1E3]">
-            Stack
-          </a>
           <a href="#experiencia" className="text-sm font-medium tracking-wide text-[#6B7280] transition hover:text-[#9FC1E3]">
             Experiencia
+          </a>
+          <a href="#stack" className="text-sm font-medium tracking-wide text-[#6B7280] transition hover:text-[#9FC1E3]">
+            Stack
           </a>
           <a href="#proyectos" className="text-sm font-medium tracking-wide text-[#6B7280] transition hover:text-[#9FC1E3]">
             Proyectos
@@ -496,74 +518,102 @@ export default function Home() {
             </a>
           </div>
         </div>
-
-        {/* Foto con halo, tamaño real de protagonista junto al nombre */}
-        <div className="relative mt-16 flex h-[260px] w-[260px] shrink-0 items-center justify-center lg:mt-0 lg:h-[320px] lg:w-[320px]">
-          <div className="absolute inset-0 rounded-[28px] border border-[#9FC1E3] shadow-[0_0_24px_rgba(159,193,227,0.18)]" />
-          <div className="relative h-[92%] w-[92%] overflow-hidden rounded-[22px] border border-[#9FC1E3]/10 bg-[#0D1119]">
-            <Image
-              src="/img/gabriel-cubillos.jpg"
-              alt="Foto de Gabriel Cubillos"
-              fill
-              className="object-cover grayscale-[15%]"
-              sizes="320px"
-            />
-          </div>
-        </div>
       </section>
 
       <section id="sobre-mi" className="relative z-10 px-[6vw] py-24">
         <Reveal>
           <SectionTitle tag="· Sobre mí" title="Un poco más de mí" />
 
-          <div className="grid gap-14 lg:grid-cols-[1.1fr_1.4fr]">
-            <div className="max-w-[520px]">
-              <p className="text-[16px] leading-relaxed text-[#9AA0B0]">
-                No solo escribo código, me enfoco en construir soluciones completas que
-                funcionen en entornos reales, involucrándome en todo el ciclo del producto,
-                desde la idea hasta la implementación en producción. He trabajado en
-                plataformas con IA aplicada con voz, asistentes conversacionales y
-                automatización buscando siempre que la tecnología aporte valor real
-                al negocio.
-              </p>
-              <p className="mt-5 text-[16px] leading-relaxed text-[#9AA0B0]">
-                Soy curioso por naturaleza: disfruto aprender rápido y meterme en problemas
-                técnicos complejos hasta resolverlos. Fuera del desarrollo mantengo un
-                equilibrio activo deporte, viajes y buena ciencia ficción, que también
-                influye en cómo diseño experiencias digitales.
-              </p>
+          <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
+            {/* Imagen */}
+            <div className="relative max-w-[420px]">
+              <div className="absolute -inset-4 rounded-[32px] bg-[#4C7DAE]/10 blur-2xl" />
 
-              <div className="mt-9 grid grid-cols-2 gap-4 sm:grid-cols-4">
+              <div className="relative overflow-hidden rounded-[28px] border border-[#9FC1E3]/15 bg-[#0D1119] p-3">
+                <div className="relative h-[460px] overflow-hidden rounded-[22px] bg-[#050608]">
+                  <Image
+                    src="/img/Gabrie.png"
+                    alt="Foto de Gabriel Cubillos"
+                    fill
+                    className="object-cover object-center grayscale-[8%]"
+                    sizes="(max-width: 768px) 100vw, 420px"
+                  />
+
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#050608]/75 via-transparent to-transparent" />
+
+                  <div className="absolute bottom-5 left-5 right-5">
+                    <p className="font-mono text-[12px] uppercase tracking-[0.16em] text-[#9FC1E3]">
+                      Full Stack Developer
+                    </p>
+                    <h3 className="mt-1 font-space text-2xl font-bold text-[#E7EAF0]">
+                      Gabriel Cubillos
+                    </h3>
+                    <p className="mt-2 text-sm leading-relaxed text-[#B7C7D8]">
+                      Desarrollo web, automatización e inteligencia artificial aplicada a
+                      productos reales.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Contenido */}
+            <div>
+              <div className="max-w-[720px]">
+                <p className="text-[18px] leading-relaxed text-[#D4D8E1]">
+                  No solo escribo código, construyo soluciones completas que funcionan
+                  en entornos reales, participando en todo el ciclo del producto, desde
+                  la idea hasta la implementación en producción.
+                  He trabajado en plataformas con inteligencia artificial aplicada a voz,
+                  avatares conversacionales, automatización de procesos, dashboards,
+                  APIs y despliegues web. Mi foco está en que la tecnología no sea solo
+                  “bonita”, sino útil, mantenible y conectada con necesidades reales de
+                  negocio.
+                  Soy curioso por naturaleza: aprendo rápido, me gusta resolver problemas
+                  técnicos complejos y mejorar continuamente lo que construyo. Fuera del
+                  desarrollo mantengo un equilibrio activo entre deporte, viajes y buena
+                  ciencia ficción.
+                </p>
+
+              </div>
+
+              {/* Stats */}
+              <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-4">
                 {aboutStats.map((stat) => (
                   <div
                     key={stat.label}
-                    className="rounded-xl border border-[#9FC1E3]/10 bg-[#0D1119] px-4 py-4 text-center"
+                    className="rounded-2xl border border-[#9FC1E3]/10 bg-[#0D1119]/80 px-5 py-5"
                   >
-                    <div className="font-space text-2xl font-bold text-[#9FC1E3]">
+                    <div className="font-space text-3xl font-bold text-[#9FC1E3]">
                       {stat.value}
                     </div>
-                    <div className="mt-1 text-[11.5px] leading-tight text-[#6B7280]">
+                    <div className="mt-2 text-[12px] leading-tight text-[#6B7280]">
                       {stat.label}
                     </div>
                   </div>
                 ))}
               </div>
-            </div>
 
-            <div className="grid gap-5 sm:grid-cols-2">
-              {interests.map((interest) => (
-                <div
-                  key={interest.title}
-                  className="rounded-2xl border border-[#9FC1E3]/10 bg-[#0D1119] p-5"
-                >
-                  <h3 className="mb-2 font-space text-[15px] font-bold text-[#9FC1E3]">
-                    {interest.title}
-                  </h3>
-                  <p className="text-sm leading-relaxed text-[#6B7280]">
-                    {interest.description}
-                  </p>
+              {/* Intereses compactos */}
+              <div className="mt-10">
+                <p className="mb-4 font-mono text-[12px] uppercase tracking-[0.14em] text-[#6B7280]">
+                  También me mueve
+                </p>
+
+                <div className="flex flex-wrap gap-3">
+                  {interests.map((interest) => (
+                    <div
+                      key={interest.title}
+                      className="group rounded-full border border-[#9FC1E3]/10 bg-[#0D1119] px-4 py-2 transition hover:border-[#9FC1E3]/35 hover:bg-[#9FC1E3]/5"
+                      title={interest.description}
+                    >
+                      <span className="text-sm font-medium text-[#B7C7D8] group-hover:text-[#9FC1E3]">
+                        {interest.title}
+                      </span>
+                    </div>
+                  ))}
                 </div>
-              ))}
+              </div>
             </div>
           </div>
         </Reveal>
@@ -602,7 +652,7 @@ export default function Home() {
             ))}
           </div>
         </Reveal>
-        
+
       </section>
 
       <section id="stack" className="relative z-10 px-[6vw] py-24">
