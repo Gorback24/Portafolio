@@ -235,7 +235,7 @@ const projects = [
 
 const experienceItems = [
   {
-    date: "2025 — Actualidad",
+    date: "2025 - Actualidad",
     title: "Full Stack Developer",
     company: "Tecnoinver - IA360 · Santiago, Chile",
     points: [
@@ -248,7 +248,7 @@ const experienceItems = [
     ],
   },
   {
-    date: "2021 — 2024",
+    date: "2021 - 2024",
     title: "Ingeniería en Informática",
     company: "INACAP · Santiago, Chile",
     points: [],
@@ -354,7 +354,7 @@ function ProjectCard({ project }: { project: (typeof projects)[number] }) {
         <ul className="mt-5 space-y-2 text-sm text-[#6B7280]">
           {project.highlights.map((item) => (
             <li key={item} className="flex gap-2">
-              <span className="text-[#4C7DAE]">—</span>
+              <span className="text-[#4C7DAE]">-</span>
               <span>{item}</span>
             </li>
           ))}
@@ -529,7 +529,7 @@ export default function Home() {
               <p className="mt-5 text-[16px] leading-relaxed text-[#9AA0B0]">
                 Soy curioso por naturaleza: disfruto aprender rápido y meterme en problemas
                 técnicos complejos hasta resolverlos. Fuera del desarrollo mantengo un
-                equilibrio activo deporte, viajes y buena ciencia ficción — que también
+                equilibrio activo deporte, viajes y buena ciencia ficción, que también
                 influye en cómo diseño experiencias digitales.
               </p>
 
@@ -676,7 +676,7 @@ export default function Home() {
           </div>
 
           <p className="text-xs text-[#4A4F5C]">
-            Santiago, Chile — Gabriel Alejandro Cubillos Román
+            Santiago, Chile - Gabriel Alejandro Cubillos Román
           </p>
         </Reveal>
       </footer>
